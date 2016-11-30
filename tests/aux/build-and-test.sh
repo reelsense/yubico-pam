@@ -13,10 +13,14 @@ else
     brew install pkg-config
     brew install libtool
     brew install asciidoc
+    brew install docbook-xsl
     brew install libyubikey
     brew install ykclient
     brew install ykpers
     cpanp install Net::LDAP::Server
+
+    # this is required so asciidoc can find the xml catalog
+    export XML_CATALOG_FILES=/usr/local/etc/xml/catalog
 fi
 
 set -e
